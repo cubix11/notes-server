@@ -19,7 +19,6 @@ app.get('/checkUser', (req, res) => {
         user: res.user
     })
 });
-//
 app.use('/auth', authRoutes);
 app.use('/api/notes', middlewares.isLoggedIn, notes);
 if(process.env.NODE_ENV === 'production') {
