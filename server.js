@@ -17,7 +17,7 @@ app.use(middlewares.checkTokenSetUser);
 app.get('/checkUser', (req, res) => {
     res.json({
         user: res.user
-    })
+    });
 });
 app.use('/auth', authRoutes);
 app.use('/api/notes', middlewares.isLoggedIn, notes);
